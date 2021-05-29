@@ -5,6 +5,10 @@
  */
 package com.mycompany.bits;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+
 /**
  *
  * @author gustavo
@@ -141,7 +145,24 @@ public class app14Bits extends javax.swing.JFrame {
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                String ruta = "CADENAS.txt";
+                String contenido = instruccion+palC;
+                File file = new File(ruta);
+            // Si el archivo no existe es creado
+                     if (!file.exists()) {
+                            file.createNewFile();
+                        }
+                FileWriter fw = new FileWriter(file);
+                BufferedWriter bw = new BufferedWriter(fw);
+                bw.write(contenido+"\n");
+                bw.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }            
         }
+        
+        
         else if(tam==2){
             String p = "000000";
             String palC = p+letra;
