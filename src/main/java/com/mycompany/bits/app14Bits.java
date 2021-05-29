@@ -125,8 +125,6 @@ public class app14Bits extends javax.swing.JFrame {
         System.out.println("hola");        // TODO add your handling code here:
         String dato;
         dato = jTextField1.getText().toString();
-        System.out.println(dato);
-        
         String letra = binary(dato);
         jTextArea1.setText(letra);
     }//GEN-LAST:event_jButton1MousePressed
