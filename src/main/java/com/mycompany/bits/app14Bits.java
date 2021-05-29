@@ -146,12 +146,15 @@ public class app14Bits extends javax.swing.JFrame {
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            System.out.println(letra);
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
-                bufferedWriter.write("Hey! Content to write in File");
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
+                
                 }
         }
         else if(tam==2){
