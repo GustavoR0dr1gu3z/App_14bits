@@ -127,6 +127,7 @@ public class app14Bits extends javax.swing.JFrame {
         dato = jTextField1.getText().toString();
         System.out.println(dato);
         jTextArea1.setText(dato);
+        
     }//GEN-LAST:event_jButton1MousePressed
 
     /**
