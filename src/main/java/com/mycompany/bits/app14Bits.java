@@ -150,6 +150,39 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+palC);
             String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
+            
+            try {          
+            File file = new File("archivo.txt");
+            // Si el archivo no existe, se crea!
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            // flag true, indica adjuntar información al archivo.
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            bw.write(contenido+"\n");
+            System.out.println("información agregada!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                            //Cierra instancias de FileWriter y BufferedWriter
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+            
+        }
+        
+            
+            
+            
+            
+            
         }
         
         else if(tam==2){
