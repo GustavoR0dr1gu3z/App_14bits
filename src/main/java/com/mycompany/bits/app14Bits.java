@@ -122,11 +122,11 @@ public class app14Bits extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
-        System.out.println("hola");        // TODO add your handling code here:
+        String instruccion= "110000";
         String dato;
         dato = jTextField1.getText().toString();
         String letra = binary(dato);
-        jTextArea1.setText(letra);
+        jTextArea1.setText(instruccion+letra);
     }//GEN-LAST:event_jButton1MousePressed
 
     public String binary(String hexa) {
