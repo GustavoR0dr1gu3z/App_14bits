@@ -126,7 +126,7 @@ public class app14Bits extends javax.swing.JFrame {
         dato = jTextField1.getText().toString();
         String letra = binary(dato);
         int tam = letra.length();
-        
+        jTextArea1.setEditable(false);
         if(tam==0){
             String p = "00000000";
             String palC = p+letra;
