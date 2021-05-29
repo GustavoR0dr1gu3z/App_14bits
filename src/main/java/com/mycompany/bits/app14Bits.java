@@ -116,7 +116,7 @@ public class app14Bits extends javax.swing.JFrame {
         System.out.println("hola");        // TODO add your handling code here:
         String dato;
         dato = jTextField1.getText().toString();
-        print(dato);
+        System.out.println(dato);
     }//GEN-LAST:event_jButton1MousePressed
 
     /**
