@@ -5,7 +5,12 @@
  */
 package com.mycompany.bits;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -132,17 +137,21 @@ public class app14Bits extends javax.swing.JFrame {
         
         String sFichero = "fichero.txt";
         File fichero = new File(sFichero);
-
-        
-        
-        
+                        
         if(tam==0){
             String p = "00000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());            
             if (fichero.exists()) {
-            
+                BufferedWriter bw;
+                try {
+                    bw = new BufferedWriter(new FileWriter(sFichero));
+                    bw.write(instruccion+palC+"\n");
+                } catch (IOException ex) {
+                    Logger.getLogger(app14Bits.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
             }
         }
         else if(tam==1){
