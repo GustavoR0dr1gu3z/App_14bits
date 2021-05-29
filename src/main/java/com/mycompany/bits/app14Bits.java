@@ -135,7 +135,7 @@ public class app14Bits extends javax.swing.JFrame {
         int tam = letra.length();
         jTextArea1.setEditable(false);
         
-        String sFichero = "fichero.txt";
+        String sFichero = "cadenas.txt";
         File fichero = new File(sFichero);
                         
         if(tam==0){
@@ -150,6 +150,7 @@ public class app14Bits extends javax.swing.JFrame {
                     bw.write(instruccion+palC+"\n");
                 } catch (IOException ex) {
                     Logger.getLogger(app14Bits.class.getName()).log(Level.SEVERE, null, ex);
+                    System.out.println("NADA");
                 }
 
             }
