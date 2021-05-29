@@ -57,7 +57,7 @@ public class app14Bits extends javax.swing.JFrame {
 
         jLabel1.setText("MOVLW    0X");
 
-        jLabel2.setText("Digite una instruccion de 3 bits válida");
+        jLabel2.setText("Digite una instrucción válida");
 
         jLabel4.setText("Resultado: ");
 
@@ -127,7 +127,13 @@ public class app14Bits extends javax.swing.JFrame {
         String letra = binary(dato);
         int tam = letra.length();
         
-        if(tam==1){
+        if(tam==0){
+            String p = "00000000";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());            
+        }
+        else if(tam==1){
             String p = "0000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
