@@ -147,13 +147,13 @@ public class app14Bits extends javax.swing.JFrame {
             System.out.println((instruccion+palC).length());
         }
         else if(tam==4){
-            String p = "00000";
+            String p = "0000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
         }
-        else if(tam==4){
-            String p = "00000";
+        else if(tam==5){
+            String p = "000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
