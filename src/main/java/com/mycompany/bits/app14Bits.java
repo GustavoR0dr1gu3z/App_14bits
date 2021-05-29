@@ -131,7 +131,8 @@ public class app14Bits extends javax.swing.JFrame {
         String letra = binary(dato);
         int tam = letra.length();
         jTextArea1.setEditable(false);
-        
+        String ruta = "CADENAS.txt";
+        File file = new File(ruta);
         
         
         if(tam==0){
@@ -145,11 +146,10 @@ public class app14Bits extends javax.swing.JFrame {
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            
             try {
-                String ruta = "CADENAS.txt";
-                String contenido = instruccion+palC;
-                File file = new File(ruta);
             // Si el archivo no existe es creado
+            String contenido = instruccion+palC;
                      if (!file.exists()) {
                             file.createNewFile();
                         }
