@@ -5,6 +5,8 @@
  */
 package com.mycompany.bits;
 
+import java.io.File;
+
 /**
  *
  * @author gustavo
@@ -127,11 +129,21 @@ public class app14Bits extends javax.swing.JFrame {
         String letra = binary(dato);
         int tam = letra.length();
         jTextArea1.setEditable(false);
+        
+        String sFichero = "fichero.txt";
+        File fichero = new File(sFichero);
+
+        
+        
+        
         if(tam==0){
             String p = "00000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());            
+            if (fichero.exists()) {
+            
+            }
         }
         else if(tam==1){
             String p = "0000000";
