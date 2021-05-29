@@ -130,6 +130,11 @@ public class app14Bits extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton1MousePressed
 
+    public String binary(String hexa) {
+        int numHex = Integer.parseInt(hexa, 16);
+        String binary = Integer.toBinaryString(numHex);
+        return binary;
+    }
     /**
      * @param args the command line arguments
      */
