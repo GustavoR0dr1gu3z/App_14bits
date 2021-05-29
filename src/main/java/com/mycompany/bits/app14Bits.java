@@ -8,6 +8,7 @@ package com.mycompany.bits;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.PrintWriter;
 
 /**
  *
@@ -145,6 +146,13 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+palC);
             String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
+                                try {
+            PrintWriter writer = new PrintWriter("filename.txt", "UTF-8");
+            writer.println(contenido);
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
                       
         }
         
@@ -195,28 +203,20 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+letra);
             String contenido = instruccion+letra;
             System.out.println((instruccion+letra).length());
+                    try {
+            PrintWriter writer = new PrintWriter("filename.txt", "UTF-8");
+            writer.println(contenido);
+            writer.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         }
         else{
             String mensaje = "Digite un numero valido";
             jTextArea1.setText(mensaje);
         }
         
-        System.out.println("ARCHIVO");
-        
-        try {
-            String ruta = "cadenas14bits.txt";
-            File file = new File(ruta);
-            // Si el archivo no existe es creado
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-            FileWriter fw = new FileWriter(file);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(contenido);
-            bw.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
         
         
     }//GEN-LAST:event_jButton1MousePressed
