@@ -143,7 +143,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 0");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -159,7 +159,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 1");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -174,7 +174,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 2");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -189,7 +189,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 3");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -204,7 +204,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 4");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -219,7 +219,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 5");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -234,7 +234,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 6");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -249,7 +249,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+palC+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 7");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
@@ -262,7 +262,7 @@ public class app14Bits extends javax.swing.JFrame {
             try {
                 bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
                 bufferedWriter.write(instruccion+letra+"\n");
-                System.out.println("LISTO");
+                System.out.println("LISTO 8");
             
             } catch (IOException e) {
                 System.out.println("Exception occurred: " + e.getMessage());
