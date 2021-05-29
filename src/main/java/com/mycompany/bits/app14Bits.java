@@ -140,6 +140,15 @@ public class app14Bits extends javax.swing.JFrame {
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());            
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else if(tam==1){
             String p = "0000000";
@@ -162,40 +171,103 @@ public class app14Bits extends javax.swing.JFrame {
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }        
         else if(tam==3){
             String p = "00000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else if(tam==4){
             String p = "0000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else if(tam==5){
             String p = "000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else if(tam==6){
             String p = "00";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else if(tam==7){
             String p = "0";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+palC+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else if(tam==8){
             jTextArea1.setText(instruccion+letra);
             System.out.println((instruccion+letra).length());
+            try {
+                bufferedWriter = new BufferedWriter(new FileWriter("cadena.txt"));
+                bufferedWriter.write(instruccion+letra+"\n");
+                System.out.println("LISTO");
+            
+            } catch (IOException e) {
+                System.out.println("Exception occurred: " + e.getMessage());
+                
+                }
         }
         else{
             String mensaje = "Digite un numero valido";
