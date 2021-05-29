@@ -158,6 +158,22 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
         }
+        else if(tam==6){
+            String p = "00";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
+        }
+        else if(tam==7){
+            String p = "0";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
+        }
+        else if(tam==8){
+            jTextArea1.setText(instruccion+letra);
+            System.out.println((instruccion+letra).length());
+        }
         
         
     }//GEN-LAST:event_jButton1MousePressed
