@@ -114,6 +114,9 @@ public class app14Bits extends javax.swing.JFrame {
 
     private void jButton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MousePressed
         System.out.println("hola");        // TODO add your handling code here:
+        String dato;
+        dato = jTextField1.getText().toString();
+        print(dato);
     }//GEN-LAST:event_jButton1MousePressed
 
     /**
