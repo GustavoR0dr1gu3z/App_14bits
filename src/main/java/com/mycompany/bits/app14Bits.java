@@ -174,6 +174,10 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+letra);
             System.out.println((instruccion+letra).length());
         }
+        else{
+            String mensaje = "Digite un numero valido";
+            jTextArea1.setText(mensaje);
+        }
         
         
     }//GEN-LAST:event_jButton1MousePressed
