@@ -156,9 +156,11 @@ public class app14Bits extends javax.swing.JFrame {
                 FileWriter fw = new FileWriter(file);
                 BufferedWriter bw = new BufferedWriter(fw);
                 bw.write(contenido+"\n");
+                System.out.println("LISTO 1");
                 bw.close();
             } catch (Exception e) {
                 e.printStackTrace();
+                
             }            
         }
         
