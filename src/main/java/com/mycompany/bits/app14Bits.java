@@ -128,7 +128,16 @@ public class app14Bits extends javax.swing.JFrame {
         String letra = binary(dato);
         int tam = letra.length();
         System.out.println(tam);
-        jTextArea1.setText(instruccion+letra);
+        
+        if(tam==1){
+            String p = "0000000";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+        }
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1MousePressed
 
     public String binary(String hexa) {
