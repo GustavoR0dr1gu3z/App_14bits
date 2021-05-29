@@ -127,15 +127,37 @@ public class app14Bits extends javax.swing.JFrame {
         dato = jTextField1.getText().toString();
         String letra = binary(dato);
         int tam = letra.length();
-        System.out.println(tam);
         
         if(tam==1){
             String p = "0000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
         }
-        
-        
+        else if(tam==2){
+            String p = "000000";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
+        }        
+        else if(tam==3){
+            String p = "00000";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
+        }
+        else if(tam==4){
+            String p = "00000";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
+        }
+        else if(tam==4){
+            String p = "00000";
+            String palC = p+letra;
+            jTextArea1.setText(instruccion+palC);
+            System.out.println((instruccion+palC).length());
+        }
         
         
     }//GEN-LAST:event_jButton1MousePressed
