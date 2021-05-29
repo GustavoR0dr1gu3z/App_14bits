@@ -5,13 +5,6 @@
  */
 package com.mycompany.bits;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 /**
  *
  * @author gustavo
@@ -135,62 +128,32 @@ public class app14Bits extends javax.swing.JFrame {
         int tam = letra.length();
         jTextArea1.setEditable(false);
         
-
-                        
+        
+        
+        
         if(tam==0){
             String p = "00000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
-            System.out.println((instruccion+palC).length());  
-            String sFichero = "cadenas.txt";
-            File fichero = new File(sFichero);
-            if (fichero.exists()) {
-                BufferedWriter bw;
-                try {
-                    bw = new BufferedWriter(new FileWriter(sFichero));
-                    bw.write(instruccion+palC+"\n");
-                    System.out.println("LISTO");
-                } catch (IOException ex) {
-                    Logger.getLogger(app14Bits.class.getName()).log(Level.SEVERE, null, ex);
-                    System.out.println("NADA");
-                }
-
-            }
+            System.out.println((instruccion+palC).length());            
         }
         else if(tam==1){
             String p = "0000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
-            String sFichero = "cadenas.txt";
-            File fichero = new File(sFichero);
-            if (fichero.exists()) {
-                BufferedWriter bw;
-                try {
-                    bw = new BufferedWriter(new FileWriter(sFichero));
-                    bw.write(instruccion+palC+"\n");
-                    System.out.println("LISTO");
-                } catch (IOException ex) {
-                    Logger.getLogger(app14Bits.class.getName()).log(Level.SEVERE, null, ex);
-                    System.out.println("NADA");
-                }
-
-            }
-
         }
         else if(tam==2){
             String p = "000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
-          
         }        
         else if(tam==3){
             String p = "00000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
             System.out.println((instruccion+palC).length());
-
         }
         else if(tam==4){
             String p = "0000";
