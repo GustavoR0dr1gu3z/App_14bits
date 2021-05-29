@@ -127,6 +127,7 @@ public class app14Bits extends javax.swing.JFrame {
         dato = jTextField1.getText().toString();
         String letra = binary(dato);
         int tam = letra.length();
+        System.out.println(tam);
         jTextArea1.setText(instruccion+letra);
     }//GEN-LAST:event_jButton1MousePressed
 
