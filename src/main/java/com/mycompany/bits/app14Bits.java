@@ -8,6 +8,7 @@ package com.mycompany.bits;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
@@ -132,6 +133,9 @@ public class app14Bits extends javax.swing.JFrame {
         String letra = binary(dato);
         int tam = letra.length();
         jTextArea1.setEditable(false);
+        BufferedWriter bw = null;
+        FileWriter fw = null;
+
 
         if(tam==0){
             String p = "00000000";
@@ -146,16 +150,7 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+palC);
             String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
-                                try {
-            PrintWriter writer = new PrintWriter("filename.txt", "UTF-8");
-            writer.println(contenido);
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-                      
-        }
-        
         
         else if(tam==2){
             String p = "000000";
@@ -203,14 +198,35 @@ public class app14Bits extends javax.swing.JFrame {
             jTextArea1.setText(instruccion+letra);
             String contenido = instruccion+letra;
             System.out.println((instruccion+letra).length());
-                    try {
-            PrintWriter writer = new PrintWriter("filename.txt", "UTF-8");
-            writer.println(contenido);
-            writer.close();
-        } catch (Exception e) {
+          
+        try {          
+            File file = new File("archivo.txt");
+            // Si el archivo no existe, se crea!
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            // flag true, indica adjuntar información al archivo.
+            fw = new FileWriter(file.getAbsoluteFile(), true);
+            bw = new BufferedWriter(fw);
+            bw.write(contenido+"\n");
+            System.out.println("información agregada!");
+        } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            try {
+                            //Cierra instancias de FileWriter y BufferedWriter
+                if (bw != null)
+                    bw.close();
+                if (fw != null)
+                    fw.close();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
         }
+            
         }
+        
+        
         else{
             String mensaje = "Digite un numero valido";
             jTextArea1.setText(mensaje);
