@@ -131,37 +131,21 @@ public class app14Bits extends javax.swing.JFrame {
         String letra = binary(dato);
         int tam = letra.length();
         jTextArea1.setEditable(false);
-        String ruta = "CADENAS.txt";
-        File file = new File(ruta);
-        
-        
+
         if(tam==0){
             String p = "00000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());            
         }
         else if(tam==1){
             String p = "0000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
-            System.out.println((instruccion+palC).length());
-            
-            try {
-            // Si el archivo no existe es creado
             String contenido = instruccion+palC;
-                     if (!file.exists()) {
-                            file.createNewFile();
-                        }
-                FileWriter fw = new FileWriter(file);
-                BufferedWriter bw = new BufferedWriter(fw);
-                bw.write(contenido+"\n");
-                System.out.println("LISTO 1");
-                bw.close();
-            } catch (Exception e) {
-                e.printStackTrace();
-                
-            }            
+            System.out.println((instruccion+palC).length());
+                      
         }
         
         
@@ -169,45 +153,69 @@ public class app14Bits extends javax.swing.JFrame {
             String p = "000000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
         }        
         else if(tam==3){
             String p = "00000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
         }
         else if(tam==4){
             String p = "0000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
         }
         else if(tam==5){
             String p = "000";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
         }
         else if(tam==6){
             String p = "00";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
         }
         else if(tam==7){
             String p = "0";
             String palC = p+letra;
             jTextArea1.setText(instruccion+palC);
+            String contenido = instruccion+palC;
             System.out.println((instruccion+palC).length());
         }
         else if(tam==8){
             jTextArea1.setText(instruccion+letra);
+            String contenido = instruccion+letra;
             System.out.println((instruccion+letra).length());
         }
         else{
             String mensaje = "Digite un numero valido";
             jTextArea1.setText(mensaje);
+        }
+        
+        System.out.println("ARCHIVO");
+        
+        try {
+            String ruta = "cadenas14bits.txt";
+            File file = new File(ruta);
+            // Si el archivo no existe es creado
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
         
         
